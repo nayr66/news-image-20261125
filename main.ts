@@ -1,5 +1,6 @@
-import { copyFileSync, mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
-const out = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-mkdirSync(out, { recursive: true });
-copyFileSync(new URL("./entry.png", import.meta.url), `${out}/entry.png`);
+const target = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+mkdirSync(target, { recursive: true });
+const bytes = readFileSync(new URL("./entry.png", import.meta.url));
+writeFileSync(`${target}/entry.png`, bytes);
