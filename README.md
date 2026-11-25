@@ -22,3 +22,5 @@ One front page summing up Wednesday 25 November 2026: 33 stories from 7 regions,
 `entry.png` (1024x1024) is drawn with Python and Pillow using real TTF fonts; `main.ts` copies it to `/output/entry.png`. Both runs write identical bytes.
 
 Built for [make.fun](https://make.fun/?ref=pce6ysea).
+
+Stories are tagged CONFIRMED, OFFICIAL, REPORTED or CLAIM, and disputed claims are attributed to their source.
